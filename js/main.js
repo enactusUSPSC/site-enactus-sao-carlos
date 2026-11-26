@@ -195,3 +195,43 @@ document.querySelectorAll('[data-marquee]').forEach((m) => {
     m.classList.toggle('is-paused');
   });
 });
+
+// 7. Carrossel dos projetos ativos: rolagem nativa com encaixe; setas, bolinhas e clique no vizinho.
+document.querySelectorAll('[data-pcar]').forEach((car) => {
+  const vp = car.querySelector('.pcar__viewport');
+  const slides = [...vp.children];
+  const dots = [...car.querySelectorAll('.pcar__dots button')];
+  const prev = car.querySelector('.pcar__btn--prev');
+  const next = car.querySelector('.pcar__btn--next');
+  const goTo = (i) => vp.scrollTo({ left: slides[Math.max(0, Math.min(i, slides.length - 1))].offsetLeft - slides[0].offsetLeft });
+  const current = () => {
+    const max = vp.scrollWidth - vp.clientWidth;
+    if (vp.scrollLeft >= max - 4) return slides.length - 1;
+    let best = 0;
+    slides.forEach((s, i) => { if (Math.abs(s.offsetLeft - slides[0].offsetLeft - vp.scrollLeft) < Math.abs(slides[best].offsetLeft - slides[0].offsetLeft - vp.scrollLeft)) best = i; });
+    return best;
+  };
+  const update = () => {
+    const c = current();
+    slides.forEach((s, i) => { s.classList.toggle('is-active', i === c); s.querySelectorAll('a').forEach((l) => (i === c ? l.removeAttribute('tabindex') : l.setAttribute('tabindex', '-1'))); });
+    dots.forEach((d, i) => (i === c ? d.setAttribute('aria-current', 'true') : d.removeAttribute('aria-current')));
+    prev.disabled = c === 0;
+    next.disabled = c === slides.length - 1;
+  };
+  let raf = 0;
+  vp.addEventListener('scroll', () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(update); }, { passive: true });
+  prev.addEventListener('click', () => goTo(current() - 1));
+  next.addEventListener('click', () => goTo(current() + 1));
+  dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+  // Clicar no projeto que aparece pela borda traz ele para frente
+  car.addEventListener('click', (e) => {
+    const s = e.target.closest('.pcar__slide');
+    if (s && !s.classList.contains('is-active')) { e.preventDefault(); goTo(slides.indexOf(s)); }
+  });
+  vp.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') { e.preventDefault(); goTo(current() + 1); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(current() - 1); }
+  });
+  window.addEventListener('resize', update);
+  update();
+});

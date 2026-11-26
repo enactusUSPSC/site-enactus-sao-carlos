@@ -86,24 +86,50 @@
         <a class="btn btn--outline" href="projetos.html">Ver todos os projetos</a>
       </div>
 
-      <article class="feature">
-        <div class="placeholder feature__ph">Foto do Iguatu em breve</div><!-- TROCAR: foto do aquecedor solar do Iguatu instalado no Capão das Antas -->
-        <div class="feature__body">
-          <span class="tag">Projeto ativo · Energia</span>
-          <h3 class="h1" style="font-size:52px">Iguatu</h3>
-          <p>Aquecedores solares de baixo custo, feitos com garrafas PET, caixinhas de leite e tubos de PVC, levam água quente para o banho às famílias do Acampamento Capão das Antas.</p>
-          <div class="feature__stats">
-            <div><strong>41,74 kWh</strong><span>de energia limpa por placa</span></div>
-            <div><strong>4,5 kg</strong><span>de resíduos reaproveitados por placa</span></div>
-          </div>
-          <a class="btn btn--primary" style="align-self:flex-start" href="projetos/iguatu.html">Conhecer o Iguatu</a>
+      <div class="pcar" data-pcar aria-roledescription="carrossel" aria-label="Projetos ativos">
+        <div class="pcar__viewport" tabindex="0">
+          <article class="pcar__slide is-active" aria-roledescription="slide" aria-label="1 de 3: Iguatu">
+            <div class="placeholder pcar__ph">Foto do Iguatu em breve</div><!-- TROCAR: foto do aquecedor solar do Iguatu no Capão das Antas -->
+            <div class="pcar__body">
+              <span class="tag">Projeto ativo · Energia</span>
+              <h3 class="h1 pcar__title">Iguatu</h3>
+              <p>Aquecedores solares de baixo custo, feitos com garrafas PET, caixinhas de leite e tubos de PVC, levam água quente para o banho às famílias do Acampamento Capão das Antas.</p>
+              <div class="feature__stats">
+                <div><strong>41,74 kWh</strong><span>de energia limpa por placa</span></div>
+                <div><strong>4,5 kg</strong><span>de resíduos reaproveitados por placa</span></div>
+              </div>
+              <a class="btn btn--primary" style="align-self:flex-start" href="projetos/iguatu.html">Conhecer o Iguatu</a>
+            </div>
+          </article>
+          <article class="pcar__slide" aria-roledescription="slide" aria-label="2 de 3: Mirus">
+            <div class="placeholder pcar__ph">Foto do Mirus em breve</div><!-- TROCAR: foto das placas e porta-copos do Mirus -->
+            <div class="pcar__body">
+              <span class="tag">Projeto ativo · Reciclagem</span>
+              <h3 class="h1 pcar__title">Mirus</h3>
+              <p>Tampinhas plásticas viram placas e porta-copos de plástico reciclado, para aumentar a renda dos cooperados da Cooperativa Acácia, em Araraquara.</p>
+              <div class="feature__stats">
+                <div><strong>PP e PEAD</strong><span>tampinhas recicladas</span></div>
+                <div><strong>4 ODS</strong><span>da ONU no impacto do projeto</span></div>
+              </div>
+              <a class="btn btn--primary" style="align-self:flex-start" href="projetos/mirus.html">Conhecer o Mirus</a>
+            </div>
+          </article>
+          <article class="pcar__slide" aria-roledescription="slide" aria-label="3 de 3: Novo projeto">
+            <div class="placeholder pcar__ph">Foto em breve</div><!-- TROCAR: foto e conteúdo do novo projeto quando houver -->
+            <div class="pcar__body">
+              <span class="tag">Em prospecção</span>
+              <h3 class="h1 pcar__title">Novo projeto</h3>
+              <p>O time está conhecendo uma nova comunidade de São Carlos e o problema que o próximo projeto vai enfrentar. Quer sugerir uma comunidade ou ajudar? Fale com a gente.</p>
+              <a class="btn btn--primary" style="align-self:flex-start" href="#contato">Falar com o time</a>
+            </div>
+          </article>
         </div>
-      </article>
-      <div class="grid-2">
-        <a class="mini mini--link" href="projetos/mirus.html"><div class="placeholder">Foto</div><div class="stack" style="gap:6px"><span class="label label--green">Projeto ativo</span><h3 class="h3">Mirus</h3><p class="small muted">Placas e porta-copos de tampinhas plásticas recicladas, com a Cooperativa Acácia, de Araraquara.</p><span class="card__link">Conhecer o Mirus →</span></div></a>
-        <div class="mini"><div class="placeholder">Foto</div><div class="stack" style="gap:6px"><span class="label label--green">Em prospecção</span><h3 class="h3">Novo projeto</h3><p class="small muted">O time está conhecendo uma nova comunidade de São Carlos para o próximo projeto.</p></div></div>
+        <div class="pcar__nav">
+          <button class="pcar__btn pcar__btn--prev" type="button" aria-label="Projeto anterior" disabled>←</button>
+          <div class="pcar__dots"><button type="button" aria-label="Ver Iguatu" aria-current="true"></button><button type="button" aria-label="Ver Mirus"></button><button type="button" aria-label="Ver Novo projeto"></button></div>
+          <button class="pcar__btn pcar__btn--next" type="button" aria-label="Próximo projeto">→</button>
+        </div>
       </div>
-      <!-- TROCAR: fotos do Mirus e conteúdo do novo projeto quando houver -->
       <h3 class="h2" style="font-size:30px">Entregues e encerrados</h3>
       <div class="grid-3">
         <a class="card" href="projetos/domus.html">
