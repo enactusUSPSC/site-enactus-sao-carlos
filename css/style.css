@@ -368,7 +368,7 @@ a.card:active { transform: scale(0.98); }
 .advisor .placeholder { width: 88px; height: 88px; border-radius: 50%; flex: none; font-size: 0; background: var(--white); }
 
 /* ODS */
-.ods { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+.ods { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
 .ods li { border-radius: var(--radius); padding: 20px 18px 24px; color: var(--ods-ink, var(--white)); font-weight: 700; font-size: 15px; line-height: 1.35; }
 .ods b { display: block; font-family: var(--font-display); font-stretch: 125%; font-weight: 900; font-size: 44px; line-height: 1.1; margin-bottom: 8px; }
 
@@ -385,7 +385,7 @@ a.card:active { transform: scale(0.98); }
   .feature { grid-template-columns: 1fr; }
   .feature img { min-height: 300px; max-height: 420px; }
   .partners { grid-template-columns: repeat(3, 1fr); }
-  .ods { grid-template-columns: repeat(3, 1fr); }
+  .ods { grid-template-columns: repeat(4, 1fr); }
   .grid-4, .members { grid-template-columns: repeat(2, 1fr); }
   .carousel { --per: 2; }
   .split { gap: 48px; }
