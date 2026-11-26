@@ -242,6 +242,10 @@ a.card:active { transform: scale(0.98); }
 
 .mini { display: flex; gap: 24px; align-items: center; background: var(--gray); border-radius: var(--radius); padding: 24px 28px; }
 .mini .placeholder { width: 96px; height: 96px; flex: none; font-size: 12px; background: var(--white); }
+.mini--link { color: inherit; text-decoration: none; transition: transform 160ms ease-out, box-shadow 160ms ease-out; }
+@media (hover: hover) { .mini--link:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(17,17,17,.08); } }
+.mini--link:active { transform: scale(0.98); }
+.mini--link:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
 
 /* Pilares pequenos */
 .pill-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
