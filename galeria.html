@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111111">
+  <title>Galeria | Enactus Campus São Carlos</title>
+  <meta name="description" content="Fotos dos projetos da Enactus Campus São Carlos.">
+  <!-- Fontes provisórias (o time ainda vai escolher a definitiva) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,700..900&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== CABEÇALHO (igual em todas as páginas) ===== -->
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="logo" href="index.html" aria-label="Enactus Campus São Carlos, página inicial">
+      <img class="logo__img" src="img/marca/enactus-sc-branco.png" alt="Enactus Campus São Carlos" width="160" height="88">
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    <nav class="site-nav" id="menu" aria-label="Menu principal">
+      <ul>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="valores.html">Valores</a></li>
+        <li><a href="time.html">Nosso time</a></li>
+        <li><a href="galeria.html" aria-current="page">Galeria</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--dark" href="recrutamento.html">Faça parte</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="section section--tight-top page-head" style="padding-bottom:40px">
+    <div class="container stack" style="gap:32px">
+      <div class="section-head">
+        <div class="stack" style="gap:20px"><h1 class="display display--xl"><em>Galeria</em></h1>
+        <p class="statement">Uma década de histórias em fotos.</p></div>
+        <p class="lead">Visitas, mutirões, treinamentos e entregas. Os bastidores dos projetos que construímos junto às comunidades de São Carlos.</p>
+      </div>
+      <div class="chips" role="group" aria-label="Filtrar fotos por projeto">
+        <button class="chip" type="button" data-filter="Todos" aria-pressed="true">Todos</button>
+        <button class="chip" type="button" data-filter="Domus" aria-pressed="false">Domus</button>
+        <button class="chip" type="button" data-filter="Kairós" aria-pressed="false">Kairós</button>
+        <button class="chip" type="button" data-filter="Melius" aria-pressed="false">Melius</button>
+        <button class="chip" type="button" data-filter="MadreChef" aria-pressed="false">MadreChef</button>
+        <button class="chip" type="button" data-filter="Geração Helena" aria-pressed="false">Geração Helena</button>
+        <button class="chip" type="button" data-filter="Athena" aria-pressed="false">Athena</button>
+        <button class="chip" type="button" data-filter="Pontapé" aria-pressed="false">Pontapé</button>
+        <button class="chip" type="button" data-filter="duLocal" aria-pressed="false">duLocal</button>
+        <button class="chip" type="button" data-filter="Mulheres à Obra" aria-pressed="false">Mulheres à Obra</button>
+        <button class="chip" type="button" data-filter="Próximo Passo" aria-pressed="false">Próximo Passo</button>
+      </div>
+    </div>
+  </section>
+  <section style="padding-bottom:var(--section)">
+    <div class="container">
+      <!-- Para adicionar uma foto: copie um <figure>, troque o src e o nome do projeto (figcaption e data-project) -->
+      <div class="masonry" data-gallery>
+        <figure data-project="Domus"><img src="img/domus.jpg" alt="Foto do projeto Domus" loading="lazy"><figcaption>Domus</figcaption></figure>
+        <figure data-project="Kairós"><img src="img/kairos.jpg" alt="Foto do projeto Kairós" loading="lazy"><figcaption>Kairós</figcaption></figure>
+        <figure data-project="Melius"><img src="img/melius.jpg" alt="Foto do projeto Melius" loading="lazy"><figcaption>Melius</figcaption></figure>
+        <figure data-project="Geração Helena"><img src="img/hero.jpg" alt="Foto do projeto Geração Helena" loading="lazy"><figcaption>Geração Helena</figcaption></figure>
+        <figure data-project="MadreChef"><img src="img/madrechef.jpg" alt="Foto do projeto MadreChef" loading="lazy"><figcaption>MadreChef</figcaption></figure>
+        <figure data-project="Athena"><img src="img/athena.jpg" alt="Foto do projeto Athena" loading="lazy"><figcaption>Athena</figcaption></figure>
+        <figure data-project="Domus"><img src="img/domus2.jpg" alt="Foto do projeto Domus" loading="lazy"><figcaption>Domus</figcaption></figure>
+        <figure data-project="Pontapé"><img src="img/pontape.jpg" alt="Foto do projeto Pontapé" loading="lazy"><figcaption>Pontapé</figcaption></figure>
+        <figure data-project="duLocal"><img src="img/dulocal.jpg" alt="Foto do projeto duLocal" loading="lazy"><figcaption>duLocal</figcaption></figure>
+        <figure data-project="Kairós"><img src="img/g-kairos0.jpg" alt="Foto do projeto Kairós" loading="lazy"><figcaption>Kairós</figcaption></figure>
+        <figure data-project="Melius"><img src="img/g-melius0.jpg" alt="Foto do projeto Melius" loading="lazy"><figcaption>Melius</figcaption></figure>
+        <figure data-project="Mulheres à Obra"><img src="img/mulheresaobra.jpg" alt="Foto do projeto Mulheres à Obra" loading="lazy"><figcaption>Mulheres à Obra</figcaption></figure>
+        <figure data-project="MadreChef"><img src="img/g-madrechef0.jpg" alt="Foto do projeto MadreChef" loading="lazy"><figcaption>MadreChef</figcaption></figure>
+        <figure data-project="Geração Helena"><img src="img/ghelena.jpg" alt="Foto do projeto Geração Helena" loading="lazy"><figcaption>Geração Helena</figcaption></figure>
+        <figure data-project="Athena"><img src="img/g-athena0.jpg" alt="Foto do projeto Athena" loading="lazy"><figcaption>Athena</figcaption></figure>
+        <figure data-project="Domus"><img src="img/domus3.jpg" alt="Foto do projeto Domus" loading="lazy"><figcaption>Domus</figcaption></figure>
+        <figure data-project="Pontapé"><img src="img/g-pontape0.jpg" alt="Foto do projeto Pontapé" loading="lazy"><figcaption>Pontapé</figcaption></figure>
+        <figure data-project="Próximo Passo"><img src="img/proximopasso.jpg" alt="Foto do projeto Próximo Passo" loading="lazy"><figcaption>Próximo Passo</figcaption></figure>
+        <figure data-project="Kairós"><img src="img/g-kairos1.jpg" alt="Foto do projeto Kairós" loading="lazy"><figcaption>Kairós</figcaption></figure>
+        <figure data-project="Melius"><img src="img/g-melius1.jpg" alt="Foto do projeto Melius" loading="lazy"><figcaption>Melius</figcaption></figure>
+        <figure data-project="duLocal"><img src="img/g-dulocal1.jpg" alt="Foto do projeto duLocal" loading="lazy"><figcaption>duLocal</figcaption></figure>
+        <figure data-project="MadreChef"><img src="img/g-madrechef1.jpg" alt="Foto do projeto MadreChef" loading="lazy"><figcaption>MadreChef</figcaption></figure>
+        <figure data-project="Domus"><img src="img/domus4.jpg" alt="Foto do projeto Domus" loading="lazy"><figcaption>Domus</figcaption></figure>
+        <figure data-project="Geração Helena"><img src="img/g-ghelena0.jpg" alt="Foto do projeto Geração Helena" loading="lazy"><figcaption>Geração Helena</figcaption></figure>
+        <figure data-project="Athena"><img src="img/g-athena1.jpg" alt="Foto do projeto Athena" loading="lazy"><figcaption>Athena</figcaption></figure>
+        <figure data-project="Pontapé"><img src="img/g-pontape1.jpg" alt="Foto do projeto Pontapé" loading="lazy"><figcaption>Pontapé</figcaption></figure>
+        <figure data-project="Domus"><img src="img/domus5.jpg" alt="Foto do projeto Domus" loading="lazy"><figcaption>Domus</figcaption></figure>
+      </div>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="cta-band">
+        <div class="stack" style="gap:10px"><h2 class="h2">Acompanhe o dia a dia do time.</h2><p>As novidades dos projetos saem primeiro no nosso Instagram.</p></div>
+        <a class="btn btn--dark" href="https://www.instagram.com/enactus_csaocarlos/" target="_blank" rel="noopener">Seguir no Instagram</a>
+      </div>
+    </div>
+  </section>
+  <div class="lightbox" data-lightbox role="dialog" aria-modal="true" aria-label="Foto ampliada">
+    <button class="lightbox__close" type="button" aria-label="Fechar">×</button>
+    <button class="lightbox__prev" type="button" aria-label="Foto anterior">←</button>
+    <img src="" alt="">
+    <button class="lightbox__next" type="button" aria-label="Próxima foto">→</button>
+    <p class="lightbox__caption"></p>
+  </div>
+</main>
+
+<!-- ===== RODAPÉ (igual em todas as páginas) ===== -->
+<footer class="site-footer" id="contato">
+  <div class="container">
+    <div class="site-footer__top">
+      <div class="stack" style="gap:16px">
+        <h2 class="h2">Vamos conversar?</h2>
+        <a class="site-footer__mail" href="mailto:enactus.campus.sc@gmail.com">enactus.campus.sc@gmail.com</a>
+        <p style="color:var(--on-dark)">São Carlos, SP · Brasil</p>
+      </div>
+      <div class="site-footer__cols">
+        <div><h3>NAVEGUE</h3><ul><li><a href="sobre.html">Sobre</a></li><li><a href="projetos.html">Projetos</a></li><li><a href="valores.html">Valores</a></li><li><a href="time.html">Nosso time</a></li><li><a href="galeria.html">Galeria</a></li></ul></div>
+        <div><h3>REDES</h3><ul>
+          <li><a href="https://www.instagram.com/enactus_csaocarlos/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/EnactusCSaoCarlos" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="#">LinkedIn</a><!-- TROCAR: link do LinkedIn --></li>
+        </ul></div>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <span>© 2026 Enactus Campus São Carlos</span>
+      <span>Grupo de extensão reconhecido pela EESC-USP</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
